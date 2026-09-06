@@ -71,33 +71,33 @@ python -m pytest tests -q
 
 若 PowerShell 不允许激活脚本，可直接使用 `.\.venv\Scripts\python.exe` 替代以上命令中的 `python`。需要对齐本次验证的依赖版本时，将安装命令中的 `requirements.txt` 换成 `requirements-tested.txt`；后者只固定直接依赖，并非完整环境锁文件。
 
-## 快速开始
+## Quick Start 快速开始
 
-先在较小的 Massachusetts 2019 数据上运行基线：
+Run the baseline on the smaller Massachusetts 2019 data: 
 
 ```bash
 python research_main.py --stages baseline --datasets acs_ma_2019
 ```
 
-运行预测模型比较（跳过 Optuna 搜索）：
+Run the predictive model comparison (skip the Optuna search)：
 
 ```bash
 python research_main.py --stages model_selection --datasets acs_ma_2019 --skip-optuna
 ```
 
-运行公平性优化：
+Run fairness optimization：
 
 ```bash
 python research_main.py --stages fairness_mitigation --datasets acs_ma_2019
 ```
 
-只运行较轻量的 Gaussian Copula 合成器：
+Run only the lightweight Gaussian Copula synthesizer：
 
 ```bash
 python scripts/run_w4_synth.py --datasets acs_ma_2019 --synthesizers gaussian_copula --privacy 0.0
 ```
 
-运行默认数据集上的全部四阶段：
+Run all 4 stages on the default dataset：
 
 ```bash
 python research_main.py
