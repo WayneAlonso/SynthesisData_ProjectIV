@@ -1,0 +1,394 @@
+{
+  "copied_files": [
+    {
+      "source": "formal_dp_synthesizer.py",
+      "destination": "formal_dp_synthesizer.py"
+    },
+    {
+      "source": "main.py",
+      "destination": "main.py"
+    },
+    {
+      "source": "research_main.py",
+      "destination": "research_main.py"
+    },
+    {
+      "source": "setup.py",
+      "destination": "setup.py"
+    },
+    {
+      "source": "w1_diagnosis.py",
+      "destination": "w1_diagnosis.py"
+    },
+    {
+      "source": "w2_accuracy.py",
+      "destination": "w2_accuracy.py"
+    },
+    {
+      "source": "w3_fairness.py",
+      "destination": "w3_fairness.py"
+    },
+    {
+      "source": "w3_repeated.py",
+      "destination": "w3_repeated.py"
+    },
+    {
+      "source": "w3_sparse.py",
+      "destination": "w3_sparse.py"
+    },
+    {
+      "source": "w4_formal_dp.py",
+      "destination": "w4_formal_dp.py"
+    },
+    {
+      "source": "w4_repeated.py",
+      "destination": "w4_repeated.py"
+    },
+    {
+      "source": "w4_synth.py",
+      "destination": "w4_synth.py"
+    },
+    {
+      "source": "src/fairness_lab/paths.py",
+      "destination": "src/fairness_lab/paths.py"
+    },
+    {
+      "source": "src/fairness_lab/settings.py",
+      "destination": "src/fairness_lab/settings.py"
+    },
+    {
+      "source": "src/fairness_lab/__init__.py",
+      "destination": "src/fairness_lab/__init__.py"
+    },
+    {
+      "source": "src/fairness_lab/data/loader.py",
+      "destination": "src/fairness_lab/data/loader.py"
+    },
+    {
+      "source": "src/fairness_lab/data/preprocessing.py",
+      "destination": "src/fairness_lab/data/preprocessing.py"
+    },
+    {
+      "source": "src/fairness_lab/data/profiling.py",
+      "destination": "src/fairness_lab/data/profiling.py"
+    },
+    {
+      "source": "src/fairness_lab/data/__init__.py",
+      "destination": "src/fairness_lab/data/__init__.py"
+    },
+    {
+      "source": "src/fairness_lab/experiments/pipeline.py",
+      "destination": "src/fairness_lab/experiments/pipeline.py"
+    },
+    {
+      "source": "src/fairness_lab/experiments/sensitivity.py",
+      "destination": "src/fairness_lab/experiments/sensitivity.py"
+    },
+    {
+      "source": "src/fairness_lab/experiments/__init__.py",
+      "destination": "src/fairness_lab/experiments/__init__.py"
+    },
+    {
+      "source": "src/fairness_lab/fairness/metrics.py",
+      "destination": "src/fairness_lab/fairness/metrics.py"
+    },
+    {
+      "source": "src/fairness_lab/fairness/__init__.py",
+      "destination": "src/fairness_lab/fairness/__init__.py"
+    },
+    {
+      "source": "src/fairness_lab/models/baseline.py",
+      "destination": "src/fairness_lab/models/baseline.py"
+    },
+    {
+      "source": "src/fairness_lab/models/generative.py",
+      "destination": "src/fairness_lab/models/generative.py"
+    },
+    {
+      "source": "src/fairness_lab/models/__init__.py",
+      "destination": "src/fairness_lab/models/__init__.py"
+    },
+    {
+      "source": "src/fairness_lab/utils/io.py",
+      "destination": "src/fairness_lab/utils/io.py"
+    },
+    {
+      "source": "src/fairness_lab/utils/reporting.py",
+      "destination": "src/fairness_lab/utils/reporting.py"
+    },
+    {
+      "source": "src/fairness_lab/utils/__init__.py",
+      "destination": "src/fairness_lab/utils/__init__.py"
+    },
+    {
+      "source": "tests/test_data_integrity.py",
+      "destination": "tests/test_data_integrity.py"
+    },
+    {
+      "source": "tests/test_metrics.py",
+      "destination": "tests/test_metrics.py"
+    },
+    {
+      "source": "tests/test_research_protocol.py",
+      "destination": "tests/test_research_protocol.py"
+    },
+    {
+      "source": "tests/test_w4_safety.py",
+      "destination": "tests/test_w4_safety.py"
+    },
+    {
+      "source": "configs/experiment.json",
+      "destination": "configs/experiment.json"
+    },
+    {
+      "source": "pytest.ini",
+      "destination": "pytest.ini"
+    },
+    {
+      "source": "scripts/check_env.py",
+      "destination": "scripts/check_env.py"
+    },
+    {
+      "source": "scripts/install_env.py",
+      "destination": "scripts/install_env.py"
+    },
+    {
+      "source": "scripts/run_all.py",
+      "destination": "scripts/run_all.py"
+    },
+    {
+      "source": "scripts/run_all_experiments.py",
+      "destination": "scripts/run_all_experiments.py"
+    },
+    {
+      "source": "scripts/run_pipeline.py",
+      "destination": "scripts/run_pipeline.py"
+    },
+    {
+      "source": "scripts/run_sensitivity.py",
+      "destination": "scripts/run_sensitivity.py"
+    },
+    {
+      "source": "scripts/run_w1_diagnosis.py",
+      "destination": "scripts/run_w1_diagnosis.py"
+    },
+    {
+      "source": "scripts/run_w2_accuracy.py",
+      "destination": "scripts/run_w2_accuracy.py"
+    },
+    {
+      "source": "scripts/run_w3_fairness.py",
+      "destination": "scripts/run_w3_fairness.py"
+    },
+    {
+      "source": "scripts/run_w4_synth.py",
+      "destination": "scripts/run_w4_synth.py"
+    },
+    {
+      "source": "scripts/generate_final_report.py",
+      "destination": "scripts/generate_final_report.py"
+    },
+    {
+      "source": "scripts/generate_visualizations.py",
+      "destination": "scripts/generate_visualizations.py"
+    },
+    {
+      "source": "data/raw/BenchmarkData/README.md",
+      "destination": "data/raw/BenchmarkData/README.md"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/config.json",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/config.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/data_dictionary.json",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/data_dictionary.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/mappings.json",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/mappings.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2018.json",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2018.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2019.csv",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2019.csv"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2019.json",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2019.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2018.csv",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2018.csv"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2018.json",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2018.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2019.csv",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2019.csv"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2019.json",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2019.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2018.csv",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2018.csv"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2018.json",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2018.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2019.csv",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2019.csv"
+    },
+    {
+      "source": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2019.json",
+      "destination": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2019.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/SBODataExcerpts/config.json",
+      "destination": "data/raw/BenchmarkData/SBODataExcerpts/config.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/SBODataExcerpts/data_dictionary.json",
+      "destination": "data/raw/BenchmarkData/SBODataExcerpts/data_dictionary.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/SBODataExcerpts/mappings.json",
+      "destination": "data/raw/BenchmarkData/SBODataExcerpts/mappings.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/SBODataExcerpts/sbo_target.csv",
+      "destination": "data/raw/BenchmarkData/SBODataExcerpts/sbo_target.csv"
+    },
+    {
+      "source": "data/raw/BenchmarkData/SBODataExcerpts/sbo_target.json",
+      "destination": "data/raw/BenchmarkData/SBODataExcerpts/sbo_target.json"
+    },
+    {
+      "source": "data/raw/BenchmarkData/SBODataExcerpts/sbo_withheld.csv",
+      "destination": "data/raw/BenchmarkData/SBODataExcerpts/sbo_withheld.csv"
+    },
+    {
+      "source": "data/raw/BenchmarkData/SBODataExcerpts/sbo_withheld.json",
+      "destination": "data/raw/BenchmarkData/SBODataExcerpts/sbo_withheld.json"
+    },
+    {
+      "source": "artifacts/w1/fairness_summary.csv",
+      "destination": "results/w1/fairness_summary.csv"
+    },
+    {
+      "source": "artifacts/w1/ood_audit.csv",
+      "destination": "results/w1/ood_audit.csv"
+    },
+    {
+      "source": "artifacts/w1/ood_drift.csv",
+      "destination": "results/w1/ood_drift.csv"
+    },
+    {
+      "source": "artifacts/w1/pain_points.csv",
+      "destination": "results/w1/pain_points.csv"
+    },
+    {
+      "source": "artifacts/w1/per_dataset.json",
+      "destination": "results/w1/per_dataset.json"
+    },
+    {
+      "source": "artifacts/w2/accuracy_summary.csv",
+      "destination": "results/w2/accuracy_summary.csv"
+    },
+    {
+      "source": "artifacts/w2/optuna_results.json",
+      "destination": "results/w2/optuna_results.json"
+    },
+    {
+      "source": "artifacts/w2/per_dataset.json",
+      "destination": "results/w2/per_dataset.json"
+    },
+    {
+      "source": "artifacts/w3/fairness_vs_accuracy.csv",
+      "destination": "results/w3/fairness_vs_accuracy.csv"
+    },
+    {
+      "source": "artifacts/w3/lambdas.json",
+      "destination": "results/w3/lambdas.json"
+    },
+    {
+      "source": "artifacts/w3/pareto_frontier.csv",
+      "destination": "results/w3/pareto_frontier.csv"
+    },
+    {
+      "source": "artifacts/w4/synth_evaluation.csv",
+      "destination": "results/w4/synth_evaluation.csv"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/group_diagnostics.csv",
+      "destination": "results/w3_repeated_acs_ma_2seed/group_diagnostics.csv"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/pareto_frontier_5d.csv",
+      "destination": "results/w3_repeated_acs_ma_2seed/pareto_frontier_5d.csv"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/sparse_group_summary.csv",
+      "destination": "results/w3_repeated_acs_ma_2seed/sparse_group_summary.csv"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/w3_repeated_raw.csv",
+      "destination": "results/w3_repeated_acs_ma_2seed/w3_repeated_raw.csv"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/w3_summary_ci.csv",
+      "destination": "results/w3_repeated_acs_ma_2seed/w3_summary_ci.csv"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/seed_42/fairness_vs_accuracy.csv",
+      "destination": "results/w3_repeated_acs_ma_2seed/seed_42/fairness_vs_accuracy.csv"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/seed_42/lambdas.json",
+      "destination": "results/w3_repeated_acs_ma_2seed/seed_42/lambdas.json"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/seed_42/pareto_frontier.csv",
+      "destination": "results/w3_repeated_acs_ma_2seed/seed_42/pareto_frontier.csv"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/seed_43/fairness_vs_accuracy.csv",
+      "destination": "results/w3_repeated_acs_ma_2seed/seed_43/fairness_vs_accuracy.csv"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/seed_43/lambdas.json",
+      "destination": "results/w3_repeated_acs_ma_2seed/seed_43/lambdas.json"
+    },
+    {
+      "source": "artifacts/w3_repeated_acs_ma_2seed/seed_43/pareto_frontier.csv",
+      "destination": "results/w3_repeated_acs_ma_2seed/seed_43/pareto_frontier.csv"
+    }
+  ],
+  "restored_from_archive": [
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2018.csv",
+      "sha256": "36efe30faec9c83b60317927f762db745241a856353205f8b5a47facab40980e"
+    }
+  ],
+  "excluded": [
+    "论文交付/",
+    "thesis_overleaf/",
+    "参考文献_50篇/",
+    "paper/document/reference generation scripts",
+    "configs/research_design.json and tests/test_research_design.py (manuscript structure checks)",
+    "chat exports and thesis planning documents",
+    "temporary smoke outputs, caches, logs, tools/tectonic",
+    "duplicate ACS root CSVs, sync copies, original ZIP, __MACOSX",
+    "dataset postcard PDF pointers",
+    "duplicate W4 checkpoint CSV"
+  ]
+}

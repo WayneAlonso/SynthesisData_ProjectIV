@@ -1,0 +1,39 @@
+# Python and environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+# New experiment output (published snapshots are in results/)
+artifacts/
+catboost_info/
+tmp/
+*.log
+*.joblib
+*.pkl
+*.pt
+*.pth
+*.ckpt
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.codex/
+.agents/
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
+*.zip
+*.tmp
+*副本*

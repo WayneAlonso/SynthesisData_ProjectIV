@@ -1,0 +1,20 @@
+# Direct dependency versions used for release verification (Python 3.10).
+# This is not a complete lock of transitive dependencies or GPU runtimes.
+pandas==2.3.3
+numpy==2.2.6
+scikit-learn==1.7.2
+lightgbm==4.6.0
+xgboost==3.2.0
+catboost==1.2.10
+optuna==4.9.0
+fairlearn==0.14.0
+sdv==1.37.0
+sdmetrics==0.28.0
+matplotlib==3.10.9
+seaborn==0.13.2
+tabulate==0.10.0
+joblib==1.5.3
+tqdm==4.67.3
+pytest==9.1.1
+scipy==1.15.3
+openpyxl==3.1.5

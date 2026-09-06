@@ -1,0 +1,7 @@
+dataset,split,sensitive_attr,groups,min_n,min_positive,min_negative,sparse_groups
+acs_ma_2019,test,HISP,5,4,1,1,6
+acs_ma_2019,test,RAC1P,7,1,0,1,5
+acs_ma_2019,test,SEX,2,721,236,389,0
+acs_ma_2019,train,HISP,5,9,5,4,2
+acs_ma_2019,train,RAC1P,8,1,0,1,6
+acs_ma_2019,train,SEX,2,2833,988,1526,0

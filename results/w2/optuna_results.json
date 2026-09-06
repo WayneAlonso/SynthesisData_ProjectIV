@@ -1,0 +1,77 @@
+{
+  "sbo": {
+    "status": "completed",
+    "used": true,
+    "best_value": 0.988338520789729,
+    "best_params": {
+      "n_estimators": 451,
+      "learning_rate": 0.027362979283096518,
+      "num_leaves": 121,
+      "subsample": 0.9283305606378294,
+      "colsample_bytree": 0.7841560875028445,
+      "max_depth": 3
+    },
+    "error": "",
+    "trials": 80
+  },
+  "sbo_withheld": {
+    "status": "completed",
+    "used": true,
+    "best_value": 0.9911135410509626,
+    "best_params": {
+      "n_estimators": 879,
+      "learning_rate": 0.013029162189800618,
+      "num_leaves": 31,
+      "subsample": 0.7677014835344993,
+      "colsample_bytree": 0.6773902958358696,
+      "max_depth": 4
+    },
+    "error": "",
+    "trials": 80
+  },
+  "acs_national_2019": {
+    "status": "completed",
+    "used": true,
+    "best_value": 0.9725953713761338,
+    "best_params": {
+      "n_estimators": 516,
+      "learning_rate": 0.016231988315387844,
+      "num_leaves": 44,
+      "subsample": 0.7833704587833256,
+      "colsample_bytree": 0.6476085173244001,
+      "max_depth": 11
+    },
+    "error": "",
+    "trials": 80
+  },
+  "acs_ma_2019": {
+    "status": "completed",
+    "used": true,
+    "best_value": 0.950824841120632,
+    "best_params": {
+      "n_estimators": 601,
+      "learning_rate": 0.016292992450893686,
+      "num_leaves": 40,
+      "subsample": 0.7362294657289158,
+      "colsample_bytree": 0.7035254126945707,
+      "max_depth": 6
+    },
+    "error": "",
+    "trials": 80
+  },
+  "acs_tx_2019": {
+    "status": "completed",
+    "used": true,
+    "best_value": 0.9486451170266107,
+    "best_params": {
+      "n_estimators": 654,
+      "learning_rate": 0.011258022477307436,
+      "num_leaves": 27,
+      "subsample": 0.7238723116733106,
+      "colsample_bytree": 0.6414428167721019,
+      "max_depth": 12
+    },
+    "error": "",
+    "trials": 80
+  }
+}

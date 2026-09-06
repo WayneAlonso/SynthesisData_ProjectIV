@@ -1,0 +1,125 @@
+{
+  "random_state": 42,
+  "test_size": 0.2,
+  "n_repeats": 3,
+  "_comment": "合成数据公平性实验主配置：W1–W4",
+
+  "dataset_catalog": {
+    "acs_ma_2019": {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2019.csv",
+      "target_column": "HIGH_INCOME",
+      "target_transform": {
+        "type": "threshold",
+        "source_column": "PINCP",
+        "threshold": 50000,
+        "positive_label": 1,
+        "negative_label": 0
+      },
+      "na_values": ["N"],
+      "sensitive_attributes": ["SEX", "RAC1P", "HISP"],
+      "categorical_columns": ["PUMA", "SEX", "MSP", "HISP", "RAC1P", "HOUSING_TYPE", "OWN_RENT", "INDP", "INDP_CAT", "EDU"],
+      "numerical_columns": ["AGEP", "NOC", "NPF", "DENSITY", "POVPIP", "DVET", "DREM", "DPHY", "DEYE", "DEAR", "PWGTP", "WGTP"]
+    },
+    "acs_tx_2019": {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2019.csv",
+      "target_column": "HIGH_INCOME",
+      "target_transform": {"type": "threshold", "source_column": "PINCP", "threshold": 50000, "positive_label": 1, "negative_label": 0},
+      "na_values": ["N"],
+      "sensitive_attributes": ["SEX", "RAC1P", "HISP"],
+      "categorical_columns": ["PUMA", "SEX", "MSP", "HISP", "RAC1P", "HOUSING_TYPE", "OWN_RENT", "INDP", "INDP_CAT", "EDU"],
+      "numerical_columns": ["AGEP", "NOC", "NPF", "DENSITY", "POVPIP", "DVET", "DREM", "DPHY", "DEYE", "DEAR", "PWGTP", "WGTP"]
+    },
+    "acs_national_2019": {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2019.csv",
+      "target_column": "HIGH_INCOME",
+      "target_transform": {"type": "threshold", "source_column": "PINCP", "threshold": 50000, "positive_label": 1, "negative_label": 0},
+      "na_values": ["N"],
+      "sensitive_attributes": ["SEX", "RAC1P", "HISP"],
+      "categorical_columns": ["PUMA", "SEX", "MSP", "HISP", "RAC1P", "HOUSING_TYPE", "OWN_RENT", "INDP", "INDP_CAT", "EDU"],
+      "numerical_columns": ["AGEP", "NOC", "NPF", "DENSITY", "POVPIP", "DVET", "DREM", "DPHY", "DEYE", "DEAR", "PWGTP", "WGTP"]
+    },
+    "sbo": {
+      "path": "data/raw/BenchmarkData/SBODataExcerpts/sbo_target.csv",
+      "target_column": "loan_approved",
+      "sensitive_attributes": ["RACE1", "SEX1"],
+      "categorical_columns": ["FIPST", "SEX1", "RACE1", "SECTOR", "ETH1", "VET1"],
+      "numerical_columns": ["EMPLOYMENT_NOISY", "PAYROLL_NOISY", "RECEIPTS_NOISY", "TABWGT", "PCT1"],
+      "excluded_feature_columns": ["RECEIPTS_NOISY"],
+      "target_transform": {"type": "threshold", "source_column": "RECEIPTS_NOISY", "threshold": 100000, "positive_label": 1, "negative_label": 0}
+    },
+    "sbo_withheld": {
+      "path": "data/raw/BenchmarkData/SBODataExcerpts/sbo_withheld.csv",
+      "target_column": "loan_approved",
+      "sensitive_attributes": ["RACE1", "SEX1"],
+      "categorical_columns": ["FIPST", "SEX1", "RACE1", "SECTOR", "ETH1", "VET1"],
+      "numerical_columns": ["EMPLOYMENT_NOISY", "PAYROLL_NOISY", "RECEIPTS_NOISY", "TABWGT", "PCT1"],
+      "excluded_feature_columns": ["RECEIPTS_NOISY"],
+      "target_transform": {"type": "threshold", "source_column": "RECEIPTS_NOISY", "threshold": 100000, "positive_label": 1, "negative_label": 0},
+      "role": "holdout_audit"
+    }
+  },
+
+  "_comment_baseline": "W1 baseline 模型 - LGBM 默认参数，承载 5 项公平性指标",
+  "baseline_model": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9
+  },
+
+  "_comment_w2_optuna": "W2 Optuna 搜索空间，optuna_best_params.json 会覆盖 baseline",
+  "optuna": {
+    "n_trials": 80,
+    "search_space": {
+      "n_estimators": [200, 1000],
+      "learning_rate": [0.01, 0.3],
+      "num_leaves": [15, 127],
+      "max_depth": [3, 12],
+      "min_child_samples": [5, 50],
+      "reg_alpha": [1e-8, 10.0],
+      "reg_lambda": [1e-8, 10.0],
+      "subsample": [0.6, 1.0],
+      "colsample_bytree": [0.6, 1.0]
+    }
+  },
+
+  "_comment_w3_fairlearn": "W3 fairlearn 约束训练参数：DP/EO + 后处理 ThresholdOptimizer + 帕累托",
+  "fairlearn": {
+    "lambdas": [0.5, 1.0, 5.0],
+    "max_iter": 25,
+    "intersectional_attrs": ["RACE1", "SEX1"],
+    "pareto_target": {
+      "spd_target": 0.1,
+      "eod_tpr_target": 0.1,
+      "acc_loss_max": 0.02
+    }
+  },
+
+  "_comment_w4_synth": "W4 四合成器 + sdmetrics + 噪声敏感性分析",
+  "synthesis_models": {
+    "ctgan":        {"epochs": 300, "batch_size": 500},
+    "tvae":         {"epochs": 300, "batch_size": 500},
+    "gaussian_copula": {},
+    "copula_gan":   {"epochs": 300, "batch_size": 500}
+  },
+
+  "_comment_w4_dp": "W4 连续特征噪声强度（保护标签与类别列；不是差分隐私预算）",
+  "privacy_levels": [0.0, 0.1, 0.3],
+
+  "_comment_sensitivity": "W2/W4 敏感性分析档位（少数派比例 / 样本量）",
+  "sensitivity": {
+    "minority_ratio": [0.05, 0.1, 0.2, 0.3],
+    "sample_size":    [1000, 3000, 5000, 10000],
+    "privacy_proxy":  [0.0, 0.1, 0.3, 0.5]
+  },
+
+  "_comment_comparison": "W3 公平性对比方法（与 fairlearn 形成对照）",
+  "comparison_models": {
+    "reweighing": {},
+    "fair_gbm_proxy": {"fairness_lambda": 1.0}
+  },
+
+  "_comment_datasets": "默认跑全 5 个数据集；CLI 可用 --datasets 覆盖",
+  "datasets": {}
+}

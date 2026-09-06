@@ -1,0 +1,8 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+# Keep exact original data bytes so SHA-256 is stable across platforms.
+data/raw/** -text
+results/** -text

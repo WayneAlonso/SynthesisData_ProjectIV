@@ -1,0 +1,141 @@
+{
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/config.json",
+      "bytes": 580,
+      "sha256": "d620033cf2b37530a9d5578de249c993fb2a6313fd60b494941e78d377ae4710"
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/data_dictionary.json",
+      "bytes": 8744,
+      "sha256": "16a170c50b89ea15b41826ca439ac971345f1a545e17278e2bdfa891fe7b56e8"
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/mappings.json",
+      "bytes": 6665,
+      "sha256": "fdfcafaa1498a48dfe67c3b37c485cc68368a579bcd5488dbbfe901e82c8ec8c"
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2018.csv",
+      "bytes": 534537,
+      "sha256": "36efe30faec9c83b60317927f762db745241a856353205f8b5a47facab40980e",
+      "columns": 24,
+      "rows": 7244
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2018.json",
+      "bytes": 10866,
+      "sha256": "9d31e0ecdad7462ae35ef4dcd1a9a6ff2eeefc6261dac2d02d46b66bf29c27f5"
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2019.csv",
+      "bytes": 562838,
+      "sha256": "4f1e49c938674f6f623a86f6abef75c6c466012cc9296df21c3d678fb08ad0b0",
+      "columns": 24,
+      "rows": 7634
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/massachusetts/ma2019.json",
+      "bytes": 11025,
+      "sha256": "5ae7498b794e7216e33e7ddd42f024f24c069b806ced2ab8c443fb963ddcac4c"
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2018.csv",
+      "bytes": 1981833,
+      "sha256": "c183f88255b95dfd5715a093b83869958c10d1fe776ea53d7e095bfc417b93f9",
+      "columns": 24,
+      "rows": 27111
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2018.json",
+      "bytes": 12183,
+      "sha256": "e4009926ac64f2fdade47d1d2281570022776a008cbed826db85442f2ea16e19"
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2019.csv",
+      "bytes": 1990721,
+      "sha256": "b49ba83e18472b6b76438bb511a01668bdbe2c1ace54521614a32edcc748f79a",
+      "columns": 24,
+      "rows": 27253
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/national/national2019.json",
+      "bytes": 12352,
+      "sha256": "67a173f0cf4dd702a1e73a480a0446372dd5f3711fc2ee32947fd862c44dafad"
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2018.csv",
+      "bytes": 635617,
+      "sha256": "cbf30c199759c325592d1e154d004ec570c33c1603ae2b62535d1004448f5f3d",
+      "columns": 24,
+      "rows": 8775
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2018.json",
+      "bytes": 11329,
+      "sha256": "149c38cbefc2007adbb5fe1dfc7444e6293ffd4a4c0f12c042aea1800023f9b4"
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2019.csv",
+      "bytes": 672219,
+      "sha256": "33b17bc20ea97c7b1752e1d42cd90dbd1b368700c88ea4273b0b95466e9a579f",
+      "columns": 24,
+      "rows": 9276
+    },
+    {
+      "path": "data/raw/BenchmarkData/ACSDataExcerpts/texas/tx2019.json",
+      "bytes": 11465,
+      "sha256": "eee541edb697bd5571ef4748fc10050661a38acfe155c6f45c8ad2958f09c76d"
+    },
+    {
+      "path": "data/raw/BenchmarkData/README.md",
+      "bytes": 10447,
+      "sha256": "44c13520da05a04b6309f39b09ec577b0ac18f10dcedc0fa8f0f2be7da2131ab"
+    },
+    {
+      "path": "data/raw/BenchmarkData/SBODataExcerpts/config.json",
+      "bytes": 292,
+      "sha256": "e75e362bbc89bb6eb6080fd7ac7281d7f2be57f4753f4f58b99de2b2f7a08f4a"
+    },
+    {
+      "path": "data/raw/BenchmarkData/SBODataExcerpts/data_dictionary.json",
+      "bytes": 37561,
+      "sha256": "8e73381b02a075a56ca79f0b37d58df5fa536809c41fe5cc98eae0662758043d"
+    },
+    {
+      "path": "data/raw/BenchmarkData/SBODataExcerpts/mappings.json",
+      "bytes": 3,
+      "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+    },
+    {
+      "path": "data/raw/BenchmarkData/SBODataExcerpts/sbo_target.csv",
+      "bytes": 67958499,
+      "sha256": "d403f8aa8e4aff754b69c136c9bdb9ec81917fbec027b649f2a1513fe00c2990",
+      "columns": 130,
+      "rows": 161079
+    },
+    {
+      "path": "data/raw/BenchmarkData/SBODataExcerpts/sbo_target.json",
+      "bytes": 30901,
+      "sha256": "b4fffe4b07c5a2b2790381cb7c92c5e1a2b14b59748adf001a2cfb3e0fcddff4"
+    },
+    {
+      "path": "data/raw/BenchmarkData/SBODataExcerpts/sbo_withheld.csv",
+      "bytes": 63537648,
+      "sha256": "24360206fb6f44571758b127333878ad05f1713c78c61f3c15cfc152fb8ee525",
+      "columns": 130,
+      "rows": 147082
+    },
+    {
+      "path": "data/raw/BenchmarkData/SBODataExcerpts/sbo_withheld.json",
+      "bytes": 30967,
+      "sha256": "de35bbe708705d17a93eaa0dcffbbd11b9a4e405922c87d1b1113563e58fdaaf"
+    },
+    {
+      "path": "data/raw/README.md",
+      "bytes": 192,
+      "sha256": "0df05354d33a4c77e8c78accf3aaabbbfd7c2a0f18794e8db3afff4688040de2"
+    }
+  ]
+}
