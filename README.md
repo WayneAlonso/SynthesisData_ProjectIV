@@ -108,19 +108,19 @@ python research_main.py
 ## 扩展运行
 
 ```bash
-# 在 SBO target 上训练，在 withheld 上进行外部审计
+# Training on the SBO target, with external auditing on withheld
 python research_main.py --stages baseline --datasets sbo sbo_withheld
 
-# 三个随机种子的公平性实验
+# Fairness experiment with three random seeds
 python w3_repeated.py --datasets acs_ma_2019 --seeds 42 43 44
 
-# 稀疏群体分析
+# Sparse population analysis
 python w3_sparse.py --datasets acs_ma_2019 --seeds 42 43 44 --min-group-size 30
 
-# Gaussian Copula 的重复实验
+# Replication experiment with Gaussian Copula
 python w4_repeated.py --datasets acs_ma_2019 --seeds 42 43 44 --synthesizers gaussian_copula --privacy-levels 0.0
 
-# 将本次运行的 W1–W4 结果汇总为 Markdown
+# Summarize the W1–W4 results of this run into Markdown
 python scripts/generate_final_report.py
 ```
 
@@ -130,13 +130,13 @@ GPU 可通过 W4 脚本的 `--use-gpu` 开启，需使用支持 CUDA 的 PyTorch
 
 数据来源是 NIST Data Excerpt Benchmarks。ACS 与 SBO 的官方背景可见 [NIST CRC](https://pages.nist.gov/privacy_collaborative_research_cycle/)，原始说明保存在 [上游 README](data/raw/BenchmarkData/README.md)。本项目使用的是本地保存的数据快照。
 
-| 数据集参数 | 原始行数 | 列数 | 用途 |
+| Dataset parameters | Original number of rows | Column number | Purpose |
 | --- | ---: | ---: | --- |
-| `acs_ma_2019` | 7,634 | 24 | 训练及测试 |
-| `acs_tx_2019` | 9,276 | 24 | 训练及测试 |
-| `acs_national_2019` | 27,253 | 24 | 训练及测试 |
-| `sbo` | 161,079 | 130 | 训练及测试 |
-| `sbo_withheld` | 147,082 | 130 | 推荐入口仅用于 W1 外部审计 |
+| 'acs_ma_2019' | 7,634 | 24 | Train and Test |
+| 'acs_tx_2019' | 9,276 | 24 | Train and TestTrain and Test |
+| 'acs_national_2019' | 27,253 | 24 | Train and Test |
+| 'sbo' | 161,079 | 130 | Train and Test |
+| 'sbo_withheld' | 147,082 | 130 | recommended entry only for W1 external audits |
 
 另附三地区 2018 年 CSV，用作对照数据，未加入默认实验配置。行数按本项目实际 CSV 统计，预处理后的样本量可能因去重、筛选或抽样而变化。数据目录和恢复记录见 [数据说明](data/README.md)。
 
