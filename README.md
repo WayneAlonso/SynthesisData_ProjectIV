@@ -140,15 +140,15 @@ GPU 可通过 W4 脚本的 `--use-gpu` 开启，需使用支持 CUDA 的 PyTorch
 
 另附三地区 2018 年 CSV，用作对照数据，未加入默认实验配置。行数按本项目实际 CSV 统计，预处理后的样本量可能因去重、筛选或抽样而变化。数据目录和恢复记录见 [数据说明](data/README.md)。
 
-## 指标与解释
+## 指标与解释Indicators and Explanations
 
-- 效用指标包含 Accuracy、F1、AUC；具体输出列以各阶段结果表为准。
-- 公平性指标包括 SPD、EOD、DI、Theil 及交叉群体指标，解释时应同时查看群体样本量与正负例数。
-- ACS 标签由 `PINCP > 50000` 构造；SBO 的 `loan_approved` 由 `RECEIPTS_NOISY > 100000` 构造，是规则标签，不是真实贷款审批记录。构造标签的源字段从模型特征中排除。
-- W3 对超过 15,000 行的 SBO 数据进行抽样，以控制约束训练的计算量。
-- W4 的 `privacy_level` 是数值加噪强度，不是差分隐私预算。`formal_dp_synthesizer.py` 为保留的实验性实现，尚未完成正式隐私保证审计，不能仅凭文件名或输出中的 epsilon 声称严格差分隐私。
-- `NaN`、错误列、回退 backend 和未成功生成的组合需要保留并解释。阶段进程正常结束不代表每个实验组合都成功。
-- 数据加载器保留旧版 `auto` 演示数据回退行为，因此正式运行前应执行 `verify_data.py`，并检查输出中的 `source`。演示结果不能视为真实数据实验。
+- Utility indicators include Accuracy, F1, and AUC; specific output columns are subject to the results tables for each stage.
+- Fairness indicators include SPD, EOD, DI, Theil, and cross-group indicators. when interpreting, both the sample size and the number of positive and negative cases should be considered
+- ACS constructed by 'PINCP > 50000'; 'loan_approved' of SBO constructed by 'RECEIPTS_NOISY > 100000' instead of loan approval record. Source fields for constructing labels excluded from the model features。
+- W3 samples SBO data to control the computational cost of constrained training.
+- 'privacy_level' of W4 is noise intensity instead of differential privacy budget. 'formal_dp_synthesizer.py' is a reserved experimental implementation and has not yet undergone a formal privacy guarantee audit, which cannot be claimed to offer strict differential privacy. 
+- 'NaN', Error columns, rollback backends, and combinations of unsuccessful generation need to be retained and explained. Completion of a phase doesn't guarantee the success of every experimental combination.
+- The data loader retains the old 'auto' demonstration data rollback behavior. Therefore, 'verify_data.py' should be executed before a production run, and the 'source' in the output should be checked. The demonstration results should not be considered as real data experiments.
 
 ## 已有结果与验证
 
