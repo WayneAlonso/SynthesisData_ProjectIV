@@ -1,43 +1,43 @@
 # Synthetic Data Fairness — 合成数据公平性实验项目
 
-一个基于 Python 的表格数据实验项目，用于比较预测模型的效用、群体公平性，以及合成数据用于下游训练时的表现。项目包含可运行代码、ACS / SBO 基准数据、配置、回归测试和已有实验结果表。
+This is a Python-based tabular data experiment project designed to compare the utility, group fairness, and performance of predictive models when used for downstream training on synthetic data. The project includes runnable code, ACS/SBO benchmark data, configuration, regression tests, and existing experimental results tables. 一个基于 Python 的表格数据实验项目，用于比较预测模型的效用、群体公平性，以及合成数据用于下游训练时的表现。项目包含可运行代码、ACS / SBO 基准数据、配置、回归测试和已有实验结果表。
 
 ## 功能
 
-| 模块 | 功能 | 主要实现 |
+| Module | Function | Main Implementation |
 | --- | --- | --- |
-| W1 | 基线预测、群体公平性诊断、SBO 外部留出审计 | `w1_diagnosis.py` |
-| W2 | LightGBM 调参、交叉验证、模型比较 | `w2_accuracy.py` |
-| W3 | Fairlearn 约束训练、阈值后处理、公平性与准确率权衡 | `w3_fairness.py` |
-| W4 | CTGAN、TVAE、Gaussian Copula、CopulaGAN 合成及 TSTR 评估 | `w4_synth.py` |
-| 扩展 | 多随机种子、稀疏群体分析、实验性直方图合成器 | `w3_repeated.py`、`w3_sparse.py`、`w4_repeated.py`、`w4_formal_dp.py` |
+| W1 | Baseline prediction, group fairness diagnosis, SBO external retention audit | 'w1_diagnosis.py' |
+| W2 | LightGBM parameter tuning, cross-validation, model comparison | 'w2_accuracy.py' |
+| W3 | Fairlearn constrained training, threshold post-processing, fairness vs. accuracy tradeoff | 'w3_fairness.py' |
+| W4 | CTGAN, TVAE, Gaussian Copula, CopulaGAN synthesis and TSTR evaluation | 'w4_synth.py' |
+| Expand | Multiple random seeds, sparse population analysis, experimental histogram synthesizer | 'w3_repeated.py'、'w3_sparse.py'、'w4_repeated.py'、'w4_formal_dp.py' |
 
-`TSTR` 指使用合成数据训练、真实测试集评估；`TRTR` 指使用真实训练集训练、真实测试集评估。
+'TSTR' Train on Synthetic data and Train on Real data; 'TRTR' Train on Synthetic data and Train on Real data
 
 ## 目录
 
 ```text
 github_release/
 ├── README.md
-├── requirements.txt             # 完整实验的直接依赖
-├── requirements-tested.txt      # 本次验证使用的直接依赖版本
+├── requirements.txt             # Direct dependencies for the complete experiment
+├── requirements-tested.txt      # The direct dependency versions used in this verification
 ├── setup.py
-├── research_main.py             # 推荐入口：按实验阶段运行
-├── main.py                      # 兼容入口：按 W1–W4 编号运行
+├── research_main.py             # Recommended entry: Run according to the experimental phase
+├── main.py                      # Compatible entry: Run according to W1–W4 numbers
 ├── w1_diagnosis.py ... w4_synth.py
 ├── w3_repeated.py / w3_sparse.py
 ├── w4_repeated.py / w4_formal_dp.py
 ├── formal_dp_synthesizer.py
-├── configs/experiment.json      # 数据路径、特征、模型和实验参数
-├── src/fairness_lab/            # 数据处理、模型、指标和工具
-├── scripts/                     # 分阶段入口、数据校验和结果汇总
-├── tests/                       # 指标、标签泄漏、留出协议等测试
-├── data/                        # 原始数据、字典、来源和校验清单
-├── results/                     # 已有结果快照（CSV / JSON）
-└── docs/                        # 代码导航、整理记录及验证说明
+├── configs/experiment.json      # Data path, features, model, and experimental parameters
+├── src/fairness_lab/            # Data processing, model, metrics, and tools
+├── scripts/                     # Stage entry, data validation, and result summary
+├── tests/                       # Test of metrics, tag leakage, hold-out protocols, etc.
+├── data/                        # Raw data, dictionary, source, and validation list
+├── results/                     # Existing result snapshots (csV/JsoN)
+└── docs/                        # Code navigation, record organization, and verificationinstructions
 ```
 
-运行产生的新结果写入 `artifacts/`，该目录已加入 `.gitignore`。已有结果快照保存在 `results/`，运行新实验不会覆盖它们。
+New results generated from the run written to 'artifacts/', which is added to '.gitignore'. Existing result snapshots are saved in 'results/', and running a new experiment will not overwrite them.
 
 ## 安装
 
